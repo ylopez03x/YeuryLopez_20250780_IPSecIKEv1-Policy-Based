@@ -3,6 +3,14 @@
 
 ---
 
+## Video de demostración
+
+[![Ver en YouTube](https://img.shields.io/badge/YouTube-Ver%20Video-red?logo=youtube)](https://youtu.be/B8s__-cEcVk)
+
+**Enlace directo:** https://youtu.be/B8s__-cEcVk
+
+---
+
 ## 1. Objetivo
 Configurar una VPN Site-to-Site punto a punto basada en políticas utilizando IPSec IKEv1, permitiendo la comunicación cifrada entre dos LANs remotas. El tráfico interesante se define mediante listas de acceso (ACL) que especifican qué redes deben ser cifradas.
 
@@ -10,9 +18,6 @@ Configurar una VPN Site-to-Site punto a punto basada en políticas utilizando IP
 
 ## 2. Topología
 
-```
-[Linux1] --- [SW1] --- [R1] --- [ISP] --- [R2] --- [SW2] --- [Linux2]
-```
 
 <img width="940" height="589" alt="image" src="https://github.com/user-attachments/assets/33e4a6d6-8c70-4070-903e-f996efdcc2ee" />
 
