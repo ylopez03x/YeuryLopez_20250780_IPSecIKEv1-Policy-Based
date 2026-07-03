@@ -14,7 +14,8 @@ Configurar una VPN Site-to-Site punto a punto basada en políticas utilizando IP
 [Linux1] --- [SW1] --- [R1] --- [ISP] --- [R2] --- [SW2] --- [Linux2]
 ```
 
-> 📸 **SCREENSHOT:** Insertar captura de la topología completa en EVE-NG
+<img width="940" height="589" alt="image" src="https://github.com/user-attachments/assets/33e4a6d6-8c70-4070-903e-f996efdcc2ee" />
+
 
 ---
 
@@ -56,7 +57,6 @@ Configurar una VPN Site-to-Site punto a punto basada en políticas utilizando IP
 
 ### 5.1 Configuración R1
 
-> 📸 **SCREENSHOT:** Insertar captura del `show running-config` de R1 mostrando crypto isakmp policy, crypto map y ACL VPN-TRAFFIC
 
 ```
 crypto isakmp policy 10
@@ -80,7 +80,6 @@ interface FastEthernet0/0
 
 ### 5.2 Configuración R2
 
-> 📸 **SCREENSHOT:** Insertar captura del `show running-config` de R2 mostrando crypto isakmp policy, crypto map y ACL VPN-TRAFFIC
 
 ```
 crypto isakmp policy 10
@@ -112,7 +111,8 @@ Ejecutar en R1:
 ```
 show crypto isakmp sa
 ```
-> 📸 **SCREENSHOT:** Insertar captura mostrando estado **QM_IDLE ACTIVE** — confirma que la Fase 1 está establecida
+> <img width="940" height="181" alt="image" src="https://github.com/user-attachments/assets/f9249367-6d31-4599-89c4-177868844bd6" />
+
 
 ### 6.2 Estado IPSec SA
 
@@ -120,7 +120,8 @@ Ejecutar en R1:
 ```
 show crypto ipsec sa
 ```
-> 📸 **SCREENSHOT:** Insertar captura mostrando `#pkts encaps` y `#pkts decaps` con valores mayores a 0 — confirma tráfico cifrado
+> <img width="940" height="514" alt="image" src="https://github.com/user-attachments/assets/9cfa31b1-2a2d-499f-9cb2-03d51458d5b9" />
+
 
 ### 6.3 Demostración de conectividad
 
@@ -128,7 +129,8 @@ Ejecutar en Linux1:
 ```
 ping -c 4 192.168.80.2
 ```
-> 📸 **SCREENSHOT:** Insertar captura del ping exitoso desde Linux1 hacia Linux2
+> <img width="940" height="228" alt="image" src="https://github.com/user-attachments/assets/3280f037-d368-4802-961c-830d8a0f3a3c" />
+
 
 ---
 
@@ -137,13 +139,3 @@ ping -c 4 192.168.80.2
 - **Cisco IOS 3725** — c3725-adventerprisek9-mz.124-15.T14
 - **Ubuntu Server 22.04** — Hosts de las LANs
 
----
-
-## 8. Archivos del repositorio
-
-| Archivo | Descripción |
-|---|---|
-| `YeuryLopez_20250780_Script_P1.txt` | Script de configuración de todos los dispositivos |
-| `YeuryLopez_20250780_Informe_P1.pdf` | Documentación técnica en PDF |
-| `YeuryLopez_20250780_Links_P1.txt` | Enlace al video de demostración |
-| `README.md` | Este archivo |
